@@ -18,7 +18,7 @@ fun main() {
         repairServices = repairServices,
         appointment = "2021/04/12"
     )
-    print(order.orderInfo())
+    println(order.orderInfo())
     order.getRepairServices().forEach {
         println(it.getRepairServiceInfo())
         println("Total: ${it.calculateTotal()}")

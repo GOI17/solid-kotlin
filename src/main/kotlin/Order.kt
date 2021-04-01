@@ -9,9 +9,7 @@ class Order(
 ) {
     fun getRepairServices() = repairServices
 
-    fun getTotal(): Float = repairServices.fold(0f) { acc, repairService ->
-        acc + repairService.calculateTotal()
-    }
+    fun getTotal(): Float = repairServices.calculateTotal()
 
     fun orderInfo(): String {
         return """
